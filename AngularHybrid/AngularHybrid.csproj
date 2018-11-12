@@ -1,4 +1,5 @@
-﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
   <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
@@ -82,7 +83,27 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="dist\angular-hybrid\3rdpartylicenses.txt" />
+    <Content Include="dist\angular-hybrid\favicon.ico" />
+    <Content Include="dist\angular-hybrid\index.html" />
+    <Content Include="dist\angular-hybrid\main.js" />
+    <Content Include="dist\angular-hybrid\polyfills.js" />
+    <Content Include="dist\angular-hybrid\runtime.js" />
+    <Content Include="dist\angular-hybrid\styles.js" />
+    <Content Include="dist\angular-hybrid\vendor.js" />
+    <Content Include="dist\out-tsc\app\app.component.js" />
+    <Content Include="dist\out-tsc\app\app.component.spec.js" />
+    <Content Include="dist\out-tsc\app\app.module.ajs.js" />
+    <Content Include="dist\out-tsc\app\app.module.js" />
+    <Content Include="dist\out-tsc\app\test.component.js" />
+    <Content Include="dist\out-tsc\environments\environment.js" />
+    <Content Include="dist\out-tsc\environments\environment.prod.js" />
+    <Content Include="dist\out-tsc\main.js" />
+    <Content Include="dist\out-tsc\polyfills.js" />
+    <Content Include="dist\out-tsc\test.js" />
     <Content Include="Global.asax" />
+    <TypeScriptCompile Include="src\app\customer.module.ts" />
+    <Content Include="src\app\customer.template.html" />
     <Content Include="src\app\app.component.css" />
     <Content Include="src\app\app.component.html" />
     <Content Include="src\favicon.ico" />
@@ -101,6 +122,21 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="package.json" />
+    <Content Include="dist\angular-hybrid\main.js.map" />
+    <Content Include="dist\angular-hybrid\polyfills.js.map" />
+    <Content Include="dist\angular-hybrid\runtime.js.map" />
+    <Content Include="dist\angular-hybrid\styles.js.map" />
+    <Content Include="dist\angular-hybrid\vendor.js.map" />
+    <Content Include="dist\out-tsc\app\app.component.js.map" />
+    <Content Include="dist\out-tsc\app\app.component.spec.js.map" />
+    <Content Include="dist\out-tsc\app\app.module.ajs.js.map" />
+    <Content Include="dist\out-tsc\app\app.module.js.map" />
+    <Content Include="dist\out-tsc\app\test.component.js.map" />
+    <Content Include="dist\out-tsc\environments\environment.js.map" />
+    <Content Include="dist\out-tsc\environments\environment.prod.js.map" />
+    <Content Include="dist\out-tsc\main.js.map" />
+    <Content Include="dist\out-tsc\polyfills.js.map" />
+    <Content Include="dist\out-tsc\test.js.map" />
     <None Include="packages.config" />
     <Content Include="tsconfig.json" />
     <Content Include="tslint.json" />
@@ -120,8 +156,10 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+    <Folder Include="src\app\ajs\customer\" />
   </ItemGroup>
   <ItemGroup>
+    <TypeScriptCompile Include="src\app\customer.component.ts" />
     <TypeScriptCompile Include="src\app\app.component.spec.ts" />
     <TypeScriptCompile Include="src\app\app.component.ts" />
     <TypeScriptCompile Include="src\app\app.module.ajs.ts" />

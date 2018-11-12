@@ -1,14 +1,22 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>AngularHybrid</title>
-  <base href="/">
+    <meta charset="utf-8">
+    <title>AngularHybrid</title>
+    <base href="/">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
-  <app-root></app-root>
+<app-root></app-root>
+
+<hr/>
+<h1>Customer List:</h1>
+<div data-ng-controller="customerController">
+        <ul>
+            <li data-ng-repeat="customer in customers">Name: {{customer.Name}} - City {{customer.City}}</li>
+        </ul>
+    </div>
 </body>
 </html>
